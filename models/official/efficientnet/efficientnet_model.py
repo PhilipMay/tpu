@@ -180,6 +180,11 @@ class MBConvBlock(tf.keras.layers.Layer):
       global_params: GlobalParams, a set of global parameters.
     """
     super(MBConvBlock, self).__init__()
+    
+    print('############################')
+    print(block_args)
+    print(global_params)
+    
     self._block_args = block_args
     self._local_pooling = global_params.local_pooling
     self._batch_norm_momentum = global_params.batch_norm_momentum
